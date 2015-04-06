@@ -406,12 +406,16 @@ class http_request
         short requestor_port;
         struct MHD_Connection* underlying_connection;
 
+        /**
+         * Method used to set a connection
+         * @param conn The name identifying the header
+        **/
         void set_underlying_connection(struct MHD_Connection* conn)
         {
             this->underlying_connection = conn;
         }
         /**
-         * Method used to set an header value by key.
+         * Method used to set a header value by key.
          * @param key The name identifying the header
          * @param value The value assumed by the header
         **/
